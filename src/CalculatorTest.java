@@ -15,25 +15,28 @@ public class CalculatorTest {
 
 			System.out.println("Please choose an operation: + - * / ");
 			String operator = scanner.next();
-
-			if (operator.equals("+")) {
-				float sum = calculator.sum(firstValue, secondValue);
-
-				System.out.println(firstValue + " + " + secondValue + " = " + (sum));
-			} else if (operator.equals("-")) {
-				float diff = calculator.difference(firstValue, secondValue);
-
-				System.out.println(firstValue + " - " + secondValue + " = " + diff);
-			} else if (operator.equals("*")) {
-				float product = calculator.product(firstValue, secondValue);
-
-				System.out.println(firstValue + " * " + secondValue + " = " + product);
-			} else if(operator.equals("/")) {
-				float diff = calculator.quotient(firstValue, secondValue);
-
-				System.out.println(firstValue + " / " + secondValue + " = " + diff);
+			
+			switch (operator) {
+				case "+": 
+					float sum = calculator.sum(firstValue, secondValue);	
+					System.out.println(firstValue + " + " + secondValue + " = " + (sum));
+					break;
+				case "-":
+					float diff = calculator.difference(firstValue, secondValue);
+					System.out.println(firstValue + " - " + secondValue + " = " + (diff));
+					break;
+				case "*":
+					float product = calculator.product(firstValue, secondValue);
+					System.out.println(firstValue + " * " + secondValue + " = " + (product));
+					break;
+				case "/":
+					float quotient = calculator.quotient(firstValue, secondValue);
+					System.out.println(firstValue + " / " + secondValue + " = " + (quotient));
+					break;
+				default:
+					break;
 			}
-
+						
 			System.out.println("Would you like to make another operation? Enter Y or N");
 			response = scanner.next();
 
