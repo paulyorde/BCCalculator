@@ -26,7 +26,7 @@ public class CalculatorTest {
 					System.out.println(firstValue + " + " + secondValue + " = " + (sum));
 					break;
 				case "-":
-					float diff = calculator.difference(firstValue, secondValue);
+					float diff = calculator.sum(firstValue, -secondValue);
 					System.out.println(firstValue + " - " + secondValue + " = " + (diff));
 					break;
 				case "*":
@@ -34,7 +34,7 @@ public class CalculatorTest {
 					System.out.println(firstValue + " * " + secondValue + " = " + (product));
 					break;
 				case "/":
-					float quotient = calculator.quotient(firstValue, secondValue);
+					float quotient = calculator.product(firstValue, 1/secondValue);
 					System.out.println(firstValue + " / " + secondValue + " = " + (quotient));
 					break;
 				default:
