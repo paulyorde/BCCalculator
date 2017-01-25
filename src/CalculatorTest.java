@@ -1,3 +1,7 @@
+/*
+ * Author: Paul Yorde
+ * Purpose: Calculator Application for ...Calculating
+ */
 import java.util.Scanner;
 
 public class CalculatorTest {
